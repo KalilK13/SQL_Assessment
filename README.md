@@ -12,6 +12,7 @@ select genre,avg(runtime) from movies where imdb_score < 7.5 group by genre;
 
 update movies set rating = 'R' where title ='starship troopers';
 
+alter table movies add column 'id' int(10) unsigned primary key AUTO_INCREMEN;
 select title, rating from movies where genre = 'horror' or genre ='documentary';
 
 select rating, avg(imdb_score), max(imdb_score), min(imdb_score) from movies group by rating;
